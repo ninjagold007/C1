@@ -1,0 +1,178 @@
+body {
+        background-color: #d3d3d3;    /* navy blue */
+        color: #FFFFFF; /* white */
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+        width:100%;
+}
+html {
+  box-sizing: border-box;
+  width:100%;
+}
+
+div{
+  width:100%;
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 10000px;
+  font-size: 100px;
+
+}
+
+/* The Masonry Container */
+.masonry {
+  column-count: 4;
+  column-gap: 1em;
+}
+
+/* The Masonry Brick */
+.masonry .item {
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template: auto auto auto  / 1fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+}
+
+.grid p {
+  text-align: center;
+
+}
+
+.item img {
+  width: 100%;
+}
+
+hr {
+  size: 100px;
+  background-color: #007bff;
+
+}
+.footer-content{
+    margin: auto auto;
+    text-align: center;
+}
+
+
+.front_container{
+  display: flex;
+  flex-wrap: wrap;
+ gap: 1rem;
+ flex-direction: row;
+ margin: 0 0 1rem 0;
+ align-items: center;
+ height: 85vh;
+ width: 100%;
+
+}
+.first_impression {
+  flex:10;
+  background-image: url("/images/front_page_background.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  font-family: cursive;
+  font-size: 100px;
+  color = white;
+  height:750px;
+  width:10px !important;
+}
+
+
+
+.front_container .container_text{
+    justify-content: center;
+    text-align: center;
+    margin: auto auto;
+    width: 100%;
+    flex:1;
+}
+
+h2 {
+  font-size: 100px;
+}
+
+.nav-link, .navbar-brand{
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 15px;
+  color: white;
+}
+.review_container{
+  align-content: center;
+  align-items: center;
+}
+
+.review_container p{
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.reviewer-names{
+  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* Masonry on large screens */
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    column-count: 4;
+  }
+  .grid .item p {
+    font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) );
+  }
+}
+
+/* Masonry on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .masonry {
+    column-count: 3;
+  }
+  .grid .item p {
+    font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) );
+  }
+  .first_impression {
+    font-size: 50px;
+    flex:5;
+    height:500px;
+    width:400px;
+  }
+}
+
+/* Masonry on small screens */
+@media only screen and (max-width: 767px){
+  .masonry {
+    column-count: 2;
+  }
+
+  .container{
+    flex-direction: column;
+
+    height: 100%
+  }
+  .first_impression {
+    font-size: 50px;
+    flex:1;
+    height: auto;
+    width:100%;
+    min-height: 400px;
+    order: -1;
+  }
+  .grid .item p {
+    font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) );
+  }
+}
